@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import Formulario from './Componentes/Formulario';
 import './App.css';
+import ResultadoIMC from './Componentes/ResultadoIMC';
+import { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+
+  const [imcs, setImcs] = useState([]);
+
+  const adicionaImcs = (imc) => {
+    setImcs([imc, ...imcs]);
+  }
+
+  return (<div className="container">
+    <h1 className="titulo">Cálculo do IMC</h1>
+
+    <Formulario aoSalvar={adicionaImcs} />
+
+    {imcs.map((imc, indice) => {
+      <ResultadoIMC
+        key={indice}
+        resultado={imc.resultado}
+      />
+    })}
+
+  </div>
   );
 }
 

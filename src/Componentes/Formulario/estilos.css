@@ -1,0 +1,23 @@
+.titulo{
+  text-align: center;
+}
+
+.form{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.altura, .peso{
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
+.btn-salvar {
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 8px;
+}
