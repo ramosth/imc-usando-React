@@ -16,12 +16,12 @@ const App = () => {
 
     <Formulario aoSalvar={adicionaImcs} />
 
-    {imcs.map((imc, indice) => {
+    {imcs.map((imc, indice) =>
       <ResultadoIMC
         key={indice}
-        resultado={imc.resultado}
+        resultado={imc}
       />
-    })}
+    )}
 
   </div>
   );

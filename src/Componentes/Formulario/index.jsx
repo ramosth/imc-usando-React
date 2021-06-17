@@ -18,12 +18,7 @@ const Formulario = (props) => {
 
   const salvar = (evento) => {
     evento.preventDefault();
-    const imc = {};
-    imc.altura = altura;
-    imc.peso = peso;
-    console.log(resultado);
-    console.log(imc);
-    props.aoSalvar(imc);
+    props.aoSalvar(resultado);
     setPeso('')
     setAltura('')
   }
